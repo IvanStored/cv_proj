@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarRightAlignExample"
+      aria-controls="navbarRightAlignExample"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      >
+    <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarRightAlignExample">
+      {% with messages = get_flashed_messages()%}
+      {% for message in messages %}
+      <div class="note note-danger mb-3">
+        <strong>Error:</strong> {{ message }}
+      </div>
+      {% endfor %}
+      {% endwith %}
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        {% if not current_user.is_anonymous %}
+        <li class="nav-item">
+          <a class="nav-link active" href="/logout">Logout</a>
+        </li>
+        {% else %}
+        <div class="container-fluid">
+          <span class="navbar-text">
+          Welcome
+          </span>
+        </div>
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+</nav>

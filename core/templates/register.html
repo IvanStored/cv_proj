@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+{% block content%}
+<div class="row justify-content-center">
+  <form action="" method="post">
+    <div class="row mb-4">
+      <div class="col">
+        <div class="form-outline">
+          <input type="text" id="first_name" name="first_name" required class="form-control" />
+          <label class="form-label" for="first_name">First name</label>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-outline">
+          <input type="text" id="last_name" required name="last_name" class="form-control" />
+          <label class="form-label" for="last_name">Last name</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-outline mb-4">
+      <input type="email" id="email" required name="email" class="form-control" />
+      <label class="form-label" for="email">Email address</label>
+    </div>
+    <div class="form-outline mb-4">
+      <input type="password" id="password" name="password" required class="form-control" />
+      <label class="form-label" for="password">Password</label>
+    </div>
+    <button id="submit" name="submit" type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
+  </form>
+</div>
+{% endblock %}

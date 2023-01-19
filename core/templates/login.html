@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{% block content%}
+<div class="row justify-content-center">
+  <form class="col-md-4" action="" method="post">
+    <div class="form-outline mb-4">
+      <input type="email" required name="email" id="email" class="form-control"/>
+      <label class="form-label" for="email">{{ form.email.label}}</label>
+    </div>
+    <div class="form-outline mb-4">
+      <input type="password" id="password" name="password" required class="form-control" />
+      <label class="form-label" for="password">{{ form.password.label }}</label>
+    </div>
+    <button id="submit" name="submit" type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+    <div class="text-center">
+      <p>Not a member? <a href="/register">Register</a></p>
+    </div>
+  </form>
+</div>
+{% endblock %}
